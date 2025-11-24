@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-background font-sans text-white antialiased;
+  }
+
+  a {
+    @apply text-white transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-accent;
+  }
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-white md:text-4xl;
+  }
+
+  .section-subtitle {
+    @apply max-w-3xl text-muted;
+  }
+
+  .card-grid {
+    @apply grid gap-6 md:gap-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-base font-semibold text-background shadow-subtle transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-2xl border border-accent/50 px-5 py-3 text-base font-semibold text-white transition hover:bg-accent/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .card-surface {
+    @apply rounded-2xl border border-border/80 bg-card/70 shadow-subtle backdrop-blur-sm;
+  }
+
+  input,
+  textarea {
+    @apply rounded-xl border border-border bg-surface/80 px-4 py-3 text-white transition placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/60;
+  }
+}
+
+@layer utilities {
+  .shadow-subtle {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  }
+}

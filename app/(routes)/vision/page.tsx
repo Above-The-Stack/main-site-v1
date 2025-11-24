@@ -22,7 +22,7 @@ export default function VisionPage() {
       <Section>
         <div className="space-y-4">
           <h1 className="section-title">Our Vision</h1>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-foreground/80">
             Above The Stack is a vendor-neutral think-tank for MSPs and the broader IT channel. We are here to help operators move from tool operators to intelligence partners.
           </p>
           <p className="text-muted">

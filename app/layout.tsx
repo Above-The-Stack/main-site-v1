@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-background text-white`}> 
-        <div className="min-h-screen bg-gradient-to-b from-background via-[#0F1423] to-[#0B0F1A]">
+      <body className={`${inter.variable} bg-background text-foreground`}>
+        <div className="min-h-screen bg-gradient-to-b from-background via-[#f3f6ff] to-[#e7eef9]">
           <Header />
           <main className="pb-16 pt-6">{children}</main>
           <Footer />

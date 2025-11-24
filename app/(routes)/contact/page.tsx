@@ -71,7 +71,7 @@ export default function ContactPage() {
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-white" htmlFor="name">
+                <label className="text-sm font-semibold text-foreground" htmlFor="name">
                   Name
                 </label>
                 <input
@@ -84,7 +84,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-white" htmlFor="email">
+                <label className="text-sm font-semibold text-foreground" htmlFor="email">
                   Email
                 </label>
                 <input
@@ -98,7 +98,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-white" htmlFor="company">
+                <label className="text-sm font-semibold text-foreground" htmlFor="company">
                   Company (optional)
                 </label>
                 <input
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 />
               </div>
               <div className="space-y-2 md:col-span-2">
-                <label className="text-sm font-semibold text-white" htmlFor="message">
+                <label className="text-sm font-semibold text-foreground" htmlFor="message">
                   Message
                 </label>
                 <textarea
@@ -130,7 +130,7 @@ export default function ContactPage() {
               </PrimaryButton>
               {status && (
                 <p
-                  className={statusType === "success" ? "text-sm text-green-300" : "text-sm text-red-300"}
+                  className={statusType === "success" ? "text-sm text-green-600" : "text-sm text-red-500"}
                   role="status"
                   aria-live="polite"
                 >

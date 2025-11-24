@@ -4,7 +4,7 @@ import { Section } from "@/components/Section";
 import { contributorItems } from "@/lib/data";
 
 export default function ContributorsPage() {
-  const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "#";
+  const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
 
   return (
     <div className="space-y-10 md:space-y-14">

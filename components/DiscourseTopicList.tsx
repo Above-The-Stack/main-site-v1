@@ -10,6 +10,8 @@ interface DiscourseTopicListProps {
 }
 
 export function DiscourseTopicList({ topics, loading, error, portalUrl }: DiscourseTopicListProps) {
+  const resolvedPortalUrl = portalUrl || "https://portal.abovethestack.com";
+
   if (loading) {
     return <p className="text-muted">Loading latest discussions…</p>;
   }
@@ -31,7 +33,7 @@ export function DiscourseTopicList({ topics, loading, error, portalUrl }: Discou
       {topics.map((topic) => (
         <Link
           key={topic.id}
-          href={`${portalUrl || "#"}/t/${topic.slug}/${topic.id}`}
+          href={`${resolvedPortalUrl}/t/${topic.slug}/${topic.id}`}
           target="_blank"
           rel="noreferrer"
           className="block rounded-2xl border border-border/80 bg-surface/80 p-4 transition hover:-translate-y-0.5 hover:border-accent/80 hover:shadow-subtle"

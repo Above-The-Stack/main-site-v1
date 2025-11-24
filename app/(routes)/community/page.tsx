@@ -10,7 +10,7 @@ export default function CommunityPage() {
   const [topics, setTopics] = useState<DiscourseTopic[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "#";
+  const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
 
   useEffect(() => {
     const fetchTopics = async () => {

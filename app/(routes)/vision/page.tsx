@@ -32,12 +32,12 @@ export default function VisionPage() {
         <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Vision</p>
-            <h1 className="section-title">Building the Managed Intelligence future.</h1>
+            <h1 className="section-title">Launching with a clear Managed Intelligence thesis.</h1>
             <p className="text-lg text-muted">
-              Above The Stack is a vendor-neutral think-tank for MSPs and the broader channel. We help operators move from tool operators to intelligence partners.
+              Above The Stack is newly founded and vendor-neutral. Our early focus is helping MSP operators move from tool operators to intelligence partners without hype.
             </p>
             <p className="text-muted">
-              We believe the future belongs to MSPs who orchestrate intelligence—combining data, automation, and culture to create resilient, outcome-driven services.
+              We believe the future belongs to MSPs who orchestrate intelligence—combining data, automation, and culture to create resilient, outcome-driven services. We are building the research and community to support that shift one release at a time.
             </p>
           </div>
           <div className="card-surface p-8">
@@ -64,10 +64,10 @@ export default function VisionPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Vision</p>
             <div className="card-surface p-6">
               <p className="text-lg text-foreground">
-                The most trusted collective of minds shaping the future of the IT channel and defining what it means to be a modern service provider.
+                A growing collective of minds shaping the future of the IT channel and defining what it means to be a modern service provider.
               </p>
               <p className="mt-3 text-muted">
-                We aim to be the reference for evolving into a Managed Intelligence Provider (MIP) with services, culture, and strategy built for the next decade.
+                We aim to become a reference for evolving into a Managed Intelligence Provider (MIP) with services, culture, and strategy built for the next decade.
               </p>
             </div>
           </div>

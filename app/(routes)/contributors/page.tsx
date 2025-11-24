@@ -12,9 +12,9 @@ export default function ContributorsPage() {
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-4">
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Contributors</p>
-            <h1 className="section-title">Founders, operators, and community hosts.</h1>
+            <h1 className="section-title">A four-person founding team.</h1>
             <p className="section-subtitle">
-              Meet the leadership shaping Above The Stack and the practitioners who keep the research, events, and playbooks grounded in real MSP work.
+              Above The Stack has just launched with four founding members. We’ll add community hosts and operator contributors here as they join.
             </p>
           </div>
           <div className="card-surface p-8">
@@ -62,28 +62,34 @@ export default function ContributorsPage() {
         </div>
       </Section>
 
-      <Section>
-        <div className="card-grid md:grid-cols-2 lg:grid-cols-3">
-          {contributorItems.map((contributor) => (
-            <Card
-              key={contributor.username}
-              title={contributor.name}
-              description={contributor.bio}
-              tag={contributor.role}
-              href={`${portalUrl}/u/${contributor.username}`}
-            >
-              <Link
-                href={`${portalUrl}/u/${contributor.username}`}
-                target="_blank"
-                rel="noreferrer"
-                className="text-accent hover:underline"
-              >
-                View profile
-              </Link>
-            </Card>
-          ))}
-        </div>
-      </Section>
+        <Section>
+          {contributorItems.length === 0 ? (
+            <div className="card-surface p-6 text-muted">
+              We’ll publish contributor profiles as soon as the first operators beyond the founding team come onboard.
+            </div>
+          ) : (
+            <div className="card-grid md:grid-cols-2 lg:grid-cols-3">
+              {contributorItems.map((contributor) => (
+                <Card
+                  key={contributor.username}
+                  title={contributor.name}
+                  description={contributor.bio}
+                  tag={contributor.role}
+                  href={`${portalUrl}/u/${contributor.username}`}
+                >
+                  <Link
+                    href={`${portalUrl}/u/${contributor.username}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-accent hover:underline"
+                  >
+                    View profile
+                  </Link>
+                </Card>
+              ))}
+            </div>
+          )}
+        </Section>
     </div>
   );
 }

@@ -85,35 +85,4 @@ export const founderItems: Contributor[] = [
   },
 ];
 
-export const contributorItems: Contributor[] = [
-  {
-    name: "Ariana Patel",
-    role: "MSP Founder",
-    bio: "Multi-region MSP leader focused on regulated industries, data-driven service design, and culture-first delivery.",
-    username: "ariana",
-  },
-  {
-    name: "Marcus Lee",
-    role: "Channel Strategist",
-    bio: "Aligns incentives and partner motions between MSPs, vendors, and distributors without vendor lock-in.",
-    username: "marcus",
-  },
-  {
-    name: "Sophia Nguyen",
-    role: "Automation Architect",
-    bio: "Designs AI-first workflows that reduce toil across dispatch, triage, and customer health reviews.",
-    username: "sophia",
-  },
-  {
-    name: "Noah Williams",
-    role: "MIP Researcher",
-    bio: "Maps the evolution from tool operator to intelligence partner, translating research into actionable playbooks.",
-    username: "noah",
-  },
-  {
-    name: "Emily Chen",
-    role: "Community Builder",
-    bio: "Hosts AMAs, panels, and roundtables so practitioners can learn from each other’s experiments and wins.",
-    username: "emily",
-  },
-];
+export const contributorItems: Contributor[] = [];

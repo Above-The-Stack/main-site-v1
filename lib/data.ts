@@ -2,64 +2,86 @@ import { Contributor, EventItem, Resource } from "./types";
 
 export const resourceItems: Resource[] = [
   {
-    title: "MSP Operating System Playbook",
-    description: "A guided blueprint to systemize delivery, account management, and leadership cadences.",
+    title: "Channel 101 Playbook: Understanding the IT Channel Ecosystem",
+    description:
+      "A foundational guide to how MSPs, vendors, distributors, marketplaces, and ISVs work together across the channel.",
     tag: "Playbook",
-    href: "#",
+    href: "https://portal.abovethestack.com",
   },
   {
-    title: "Managed Intelligence Provider Checklist",
-    description: "Step-by-step checklist to transition from reactive service desk to proactive intelligence partner.",
-    tag: "Checklist",
-    href: "#",
-  },
-  {
-    title: "Pricing & Packaging Framework",
-    description: "Model different service packages with value-based positioning and predictable margins.",
-    tag: "Framework",
-    href: "#",
-  },
-  {
-    title: "AI Service Design Templates",
-    description: "Templates to incorporate automation, copilots, and data services across the MSP lifecycle.",
-    tag: "Templates",
-    href: "#",
-  },
-  {
-    title: "Sales Enablement Narrative",
-    description: "Story-driven deck structure to communicate the Above The Stack mindset to prospects.",
+    title: "MSP Evolution Playbook: From 1.0 to MIP",
+    description:
+      "A strategic roadmap from break/fix to platform-driven MIP, covering shifts in identity, service model, and operations.",
     tag: "Playbook",
-    href: "#",
+    href: "https://portal.abovethestack.com",
   },
   {
-    title: "Security & Compliance Runbooks",
-    description: "Operational runbooks that balance risk, resilience, and the modern co-managed stack.",
-    tag: "Runbook",
-    href: "#",
+    title: "MSP Playbook: Positioning Your Services in 2025",
+    description:
+      "Outcome-first guidance for packaging services, sharpening value propositions, and setting near-term GTM priorities.",
+    tag: "Playbook",
+    href: "https://portal.abovethestack.com",
+  },
+  {
+    title: "M&A MSP 2025 Playbook: Seizing Opportunities in the Dutch Market",
+    description:
+      "Practical advice on readiness, valuation drivers, and timing for MSPs exploring exits, sales, or acquisitions in NL.",
+    tag: "Playbook",
+    href: "https://portal.abovethestack.com",
   },
 ];
 
 export const eventItems: EventItem[] = [
   {
-    title: "AMA: Building the Managed Intelligence Provider",
-    date: "2025-02-12",
-    location: "Virtual • Live on Discourse",
-    description: "A live session unpacking the MIP model with real-world playbooks and audience Q&A.",
-    link: "#",
+    title: "Roundtable: From MSP 1.0 to Managed Intelligence Provider",
+    date: "2025-02-20",
+    location: "Online • Community Portal",
+    description:
+      "Founding team-led discussion on the MSP 1.0 → 2.0 → MIP journey with practical steps for service, ops, and identity.",
+    link: "https://portal.abovethestack.com",
   },
   {
-    title: "Cohort: Modern Service Packaging",
-    date: "2025-03-05",
-    location: "Virtual • 4-week sprint",
-    description: "Workshop series to redesign your offers, pricing, and value narrative.",
-    link: "#",
+    title: "Channel Deep Dive: Partner Models & Ecosystem Plays",
+    date: "2025-03-12",
+    location: "Online • Live",
+    description:
+      "Exploring vendor-neutral partner models, co-selling motions, and distributor relationships for modern MSPs.",
+    link: "https://portal.abovethestack.com",
   },
   {
-    title: "Roundtable: AI & Automation for MSPs",
-    date: "2025-04-10",
-    location: "Hybrid • Austin + Virtual",
-    description: "Operators share real automation wins across onboarding, NOC, and customer success.",
-    link: "#",
+    title: "Security Culture AMA with Kevin Zwaan",
+    date: "2025-03-27",
+    location: "Online • Portal Stage",
+    description:
+      "Responsible security practices, ethical hacking lessons, and how to embed security-by-design in MSP delivery.",
+    link: "https://portal.abovethestack.com",
+  },
+];
+
+export const founderItems: Contributor[] = [
+  {
+    name: "Tycho Löke",
+    role: "Founder & Vision Lead",
+    bio: "Primary founder shaping the Above The Stack narrative, MSP 1.0 → MIP frameworks, and public voice of the brand.",
+    username: "tycho",
+  },
+  {
+    name: "Pierre Kleine Schaars",
+    role: "Co-Founder & Operational Excellence Lead",
+    bio: "MSP operator focused on day-to-day maturity, service standardization, and secure delivery models that scale.",
+    username: "pierre",
+  },
+  {
+    name: "Kevin Zwaan",
+    role: "Co-Founder & Community Security Lead",
+    bio: "Ethical hacker championing responsible security practices, vulnerability awareness, and security-by-design thinking.",
+    username: "kevin",
+  },
+  {
+    name: "Ashley Schut",
+    role: "Co-Founder & Strategic Ecosystem Lead",
+    bio: "Connector across MSPs, vendors, distributors, and communities to align collaborations and cross-community initiatives.",
+    username: "ashley",
   },
 ];
 
@@ -67,13 +89,13 @@ export const contributorItems: Contributor[] = [
   {
     name: "Ariana Patel",
     role: "MSP Founder",
-    bio: "Built a multi-region MSP focused on regulated industries; passionate about data-driven service design and culture.",
+    bio: "Multi-region MSP leader focused on regulated industries, data-driven service design, and culture-first delivery.",
     username: "ariana",
   },
   {
     name: "Marcus Lee",
     role: "Channel Strategist",
-    bio: "Helps vendors and MSPs align incentives, programs, and co-selling motions without vendor lock-in.",
+    bio: "Aligns incentives and partner motions between MSPs, vendors, and distributors without vendor lock-in.",
     username: "marcus",
   },
   {
@@ -83,21 +105,15 @@ export const contributorItems: Contributor[] = [
     username: "sophia",
   },
   {
-    name: "Diego Ramirez",
-    role: "Service Design Leader",
-    bio: "Leads service innovation at a global MSP; focuses on packaging, customer outcomes, and delivery excellence.",
-    username: "diego",
-  },
-  {
-    name: "Emily Chen",
-    role: "Community Builder",
-    bio: "Curates AMAs and peer cohorts, ensuring practitioners learn from each other’s experiments and wins.",
-    username: "emily",
-  },
-  {
     name: "Noah Williams",
     role: "MIP Researcher",
     bio: "Maps the evolution from tool operator to intelligence partner, translating research into actionable playbooks.",
     username: "noah",
+  },
+  {
+    name: "Emily Chen",
+    role: "Community Builder",
+    bio: "Hosts AMAs, panels, and roundtables so practitioners can learn from each other’s experiments and wins.",
+    username: "emily",
   },
 ];

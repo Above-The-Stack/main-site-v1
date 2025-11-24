@@ -15,7 +15,7 @@ export default function EventsPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Events & cohorts</p>
             <h1 className="section-title">Curated live experiences for operators.</h1>
             <p className="section-subtitle">
-              AMAs, workshops, and roundtables designed to help you ship better offers, automation, and culture.
+              AMAs, workshops, and roundtables built around MSP evolution, channel strategy, security, and culture—always vendor-neutral and community-led.
             </p>
           </div>
           <div className="card-surface p-8">
@@ -23,7 +23,8 @@ export default function EventsPage() {
             <ul className="mt-4 space-y-3 text-muted">
               <li>• Practical sessions with templates you can copy.</li>
               <li>• Operator-only rooms—no vendor pitches.</li>
-              <li>• Access to recordings and summaries in the portal.</li>
+              <li>• Access to recordings, recaps, and registration links in the portal.</li>
+              <li>• Monthly themed discussions and quarterly roundtables.</li>
             </ul>
           </div>
         </div>

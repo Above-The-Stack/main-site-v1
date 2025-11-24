@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { FormEvent, useMemo, useState } from "react";
 import { Card } from "@/components/Card";
 import { PrimaryButton, SecondaryButton } from "@/components/Buttons";
 import { Section } from "@/components/Section";
@@ -24,6 +24,11 @@ function useClipboardMessage() {
 }
 
 export default function AdminPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [authError, setAuthError] = useState<string | null>(null);
+
   const [resources, setResources] = useState<Resource[]>(resourceItems);
   const [events, setEvents] = useState<EventItem[]>(eventItems);
   const [contributors, setContributors] = useState<Contributor[]>(contributorItems);
@@ -55,6 +60,19 @@ export default function AdminPage() {
     [resources, events, contributors],
   );
 
+  const handleLogin = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    if (username.trim() === "admin" && password === "admin1234!") {
+      setIsAuthenticated(true);
+      setAuthError(null);
+      setPassword("");
+      return;
+    }
+
+    setAuthError("Invalid credentials. Please try again.");
+  };
+
   const addResource = () => {
     setResources((prev) => [...prev, newResource]);
     setNewResource({ title: "", description: "", tag: "Playbook", href: "" });
@@ -69,6 +87,56 @@ export default function AdminPage() {
     setContributors((prev) => [...prev, newContributor]);
     setNewContributor({ name: "", role: "", bio: "", username: "" });
   };
+
+  if (!isAuthenticated) {
+    return (
+      <Section>
+        <div className="mx-auto max-w-md space-y-6">
+          <div className="space-y-2 text-center">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Admin</p>
+            <h1 className="text-3xl font-semibold text-foreground md:text-4xl">Sign in to continue</h1>
+            <p className="text-base text-muted">This portal is restricted to administrators only.</p>
+          </div>
+          <form onSubmit={handleLogin} className="card-surface space-y-4 p-6">
+            <div className="space-y-2">
+              <label className="text-sm text-muted" htmlFor="admin-username">
+                Username
+              </label>
+              <input
+                id="admin-username"
+                autoComplete="username"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+                placeholder="Enter admin username"
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-sm text-muted" htmlFor="admin-password">
+                Password
+              </label>
+              <input
+                id="admin-password"
+                type="password"
+                autoComplete="current-password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                placeholder="Enter admin password"
+              />
+            </div>
+            {authError && <p className="text-sm text-accent" role="alert">{authError}</p>}
+            <div className="flex gap-3">
+              <PrimaryButton type="submit" className="flex-1">
+                Sign in
+              </PrimaryButton>
+              <SecondaryButton href="/" className="flex-1">
+                Return home
+              </SecondaryButton>
+            </div>
+          </form>
+        </div>
+      </Section>
+    );
+  }
 
   return (
     <div className="space-y-12 md:space-y-16">

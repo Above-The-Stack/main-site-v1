@@ -15,9 +15,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={`${inter.variable} bg-background text-foreground`}>
-        <div className="min-h-screen bg-gradient-to-b from-background via-[#f3f6ff] to-[#e7eef9]">
+        <div className="relative min-h-screen overflow-hidden">
+          <div className="pointer-events-none absolute inset-0 opacity-70">
+            <div className="grid-angled absolute inset-0" />
+          </div>
           <Header />
-          <main className="pb-16 pt-6">{children}</main>
+          <main className="pb-20 pt-8">{children}</main>
           <Footer />
         </div>
       </body>

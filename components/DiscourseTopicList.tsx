@@ -18,7 +18,7 @@ export function DiscourseTopicList({ topics, loading, error, portalUrl }: Discou
 
   if (error) {
     return (
-      <p className="text-red-300">
+      <p className="text-red-500">
         We couldn&apos;t load the latest discussions right now. Please try again shortly.
       </p>
     );
@@ -39,14 +39,14 @@ export function DiscourseTopicList({ topics, loading, error, portalUrl }: Discou
           className="block rounded-2xl border border-border/80 bg-surface/80 p-4 transition hover:-translate-y-0.5 hover:border-accent/80 hover:shadow-subtle"
         >
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <h3 className="text-lg font-semibold text-white">{topic.title}</h3>
+            <h3 className="text-lg font-semibold text-foreground">{topic.title}</h3>
             <span className="text-xs text-muted">{formatRelativeTime(topic.last_posted_at || topic.created_at)}</span>
           </div>
           <div className="mt-2 flex items-center gap-4 text-sm text-muted">
-            <span className="inline-flex items-center gap-1 rounded-full bg-card/60 px-3 py-1 text-white/80">
+            <span className="inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-accent">
               Replies: {topic.reply_count}
             </span>
-            <span className="inline-flex items-center gap-1 rounded-full bg-card/60 px-3 py-1 text-white/80">
+            <span className="inline-flex items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-accent">
               Posts: {topic.posts_count}
             </span>
           </div>

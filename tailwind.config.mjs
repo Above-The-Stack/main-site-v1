@@ -1,11 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-const colors = {
-  navy: "#0C101B",
-  cyan: "#00C7C7",
-  gray: "#8A93A6",
-  white: "#FFFFFF",
-};
-
 const config = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,12 +8,14 @@ const config = {
   theme: {
     extend: {
       colors: {
-        background: colors.navy,
-        accent: colors.cyan,
-        muted: colors.gray,
-        surface: "#111727",
-        border: "#1B2236",
-        card: "#12192A",
+        background: "#EAF2FC",
+        foreground: "#0F2144",
+        accent: "#1E73BE",
+        cta: "#F36D53",
+        muted: "#5C6F8F",
+        surface: "#FFFFFF",
+        border: "#CFDFF2",
+        card: "#FFFFFF",
       },
       fontFamily: {
         sans: ["Inter", "var(--font-inter)", "system-ui", "sans-serif"],

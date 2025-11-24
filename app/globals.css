@@ -2,27 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-}
-
 @layer base {
   body {
-    @apply bg-background font-sans text-white antialiased;
+    @apply bg-gradient-to-br from-background via-[#f5f8ff] to-[#e7eef9] font-sans text-foreground antialiased;
   }
 
   a {
-    @apply text-white transition-colors duration-200;
+    @apply font-semibold text-accent transition-colors duration-200;
   }
 
   a:hover {
-    @apply text-accent;
+    @apply text-cta;
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-3xl font-bold tracking-tight text-white md:text-4xl;
+    @apply text-3xl font-bold tracking-tight text-foreground md:text-4xl;
   }
 
   .section-subtitle {
@@ -34,20 +30,20 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-2xl bg-accent px-5 py-3 text-base font-semibold text-background shadow-subtle transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-accent to-cta px-5 py-3 text-base font-semibold text-white shadow-subtle transition hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center rounded-2xl border border-accent/50 px-5 py-3 text-base font-semibold text-white transition hover:bg-accent/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center rounded-2xl border border-accent/70 px-5 py-3 text-base font-semibold text-accent transition hover:bg-accent/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
   }
 
   .card-surface {
-    @apply rounded-2xl border border-border/80 bg-card/70 shadow-subtle backdrop-blur-sm;
+    @apply rounded-2xl border border-border bg-card shadow-subtle backdrop-blur-sm;
   }
 
   input,
   textarea {
-    @apply rounded-xl border border-border bg-surface/80 px-4 py-3 text-white transition placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/60;
+    @apply rounded-xl border border-border bg-white px-4 py-3 text-foreground transition placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40;
   }
 }
 

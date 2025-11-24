@@ -23,9 +23,9 @@ export function Card({ title, description, tag, href, children, className }: Car
           )}
         </div>
       </div>
-      <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
+      <h3 className="mt-4 text-xl font-semibold text-foreground">{title}</h3>
       <p className="mt-2 text-muted">{description}</p>
-      {children && <div className="mt-4 text-sm text-white/90">{children}</div>}
+      {children && <div className="mt-4 text-sm text-foreground/80">{children}</div>}
     </div>
   );
 

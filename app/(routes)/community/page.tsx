@@ -37,7 +37,7 @@ export default function CommunityPage() {
       <Section>
         <div className="space-y-4">
           <h1 className="section-title">Community</h1>
-          <p className="text-lg text-white/80">
+          <p className="text-lg text-foreground/80">
             Join the Above The Stack Discourse portal to meet operators, founders, and channel leaders.
           </p>
           <p className="text-muted">
@@ -55,7 +55,7 @@ export default function CommunityPage() {
           {["Join the portal", "Introduce yourself", "Join discussions, AMAs, and cohorts"].map((step, index) => (
             <div key={step} className="card-surface p-6">
               <p className="text-sm font-semibold text-accent">Step {index + 1}</p>
-              <h3 className="mt-3 text-xl font-semibold text-white">{step}</h3>
+              <h3 className="mt-3 text-xl font-semibold text-foreground">{step}</h3>
               <p className="mt-2 text-muted">
                 {index === 0 && "Create your account to unlock the community."}
                 {index === 1 && "Share your focus areas so peers can collaborate."}

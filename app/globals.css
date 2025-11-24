@@ -4,13 +4,21 @@
 
 :root {
   --color-primary: #f18268;
+  --color-primary-rgb: 241 130 104;
   --color-accent: #10c0e7;
+  --color-accent-rgb: 16 192 231;
   --color-bg: #22327a;
+  --color-bg-rgb: 34 50 122;
   --color-surface: #2c3c92;
+  --color-surface-rgb: 44 60 146;
   --color-surface-soft: #3047a6;
+  --color-surface-soft-rgb: 48 71 166;
   --color-text: #f4f7ff;
+  --color-text-rgb: 244 247 255;
   --color-text-muted: #c8d2ff;
+  --color-text-muted-rgb: 200 210 255;
   --color-border-subtle: #3c4f9e;
+  --color-border-subtle-rgb: 60 79 158;
 }
 
 @layer base {

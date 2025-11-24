@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} bg-background text-foreground`}>
+      <body className={`${inter.variable} bg-brand-bg text-brand-text`}>
         <div className="relative min-h-screen overflow-hidden">
           <div className="pointer-events-none absolute inset-0 opacity-70">
             <div className="grid-angled absolute inset-0" />

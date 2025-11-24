@@ -21,13 +21,15 @@ Open http://localhost:3000 to view the site.
 ## Environment variables
 The following environment variables are used. Only `NEXT_PUBLIC_*` variables are exposed client-side.
 
-- `NEXT_PUBLIC_PORTAL_URL` – Public URL for the Discourse portal (used for links)
+- `NEXT_PUBLIC_PORTAL_URL` – Public URL for the Discourse portal (used for links). Defaults to `https://portal.abovethestack.com`.
 - `DISCOURSE_URL` – Base URL of the Discourse instance
 - `DISC_API_KEY` – Discourse API key
 - `DISC_API_USERNAME` – Discourse API username (e.g. `system`)
 - `SENDGRID_API_KEY` – SendGrid API key
 - `CONTACT_FROM_EMAIL` – From address for contact emails
 - `CONTACT_RECIPIENT_EMAIL` – Recipient for contact emails
+
+See `.env.example` for sample values used in development.
 
 ## Routes
 - `/` – Home

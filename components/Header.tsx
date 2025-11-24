@@ -14,6 +14,8 @@ const navItems = [
   { href: "/contact", label: "Contact" },
 ];
 
+const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
+
 export function Header() {
   const pathname = usePathname();
 
@@ -38,7 +40,7 @@ export function Header() {
           ))}
         </nav>
         <Link
-          href={process.env.NEXT_PUBLIC_PORTAL_URL || "#"}
+          href={portalUrl}
           className="hidden rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-background shadow-subtle transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:inline-flex"
         >
           Join
@@ -59,7 +61,7 @@ export function Header() {
             </Link>
           ))}
           <Link
-            href={process.env.NEXT_PUBLIC_PORTAL_URL || "#"}
+            href={portalUrl}
             className="ml-auto whitespace-nowrap rounded-xl bg-accent px-3 py-2 text-sm font-semibold text-background shadow-subtle"
           >
             Portal

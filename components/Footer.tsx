@@ -9,7 +9,10 @@ export function Footer() {
           <p className="text-muted">Vendor-neutral. MSP-first. Future-focused.</p>
         </div>
         <div className="flex items-center gap-4 text-white/80">
-          <Link href={process.env.NEXT_PUBLIC_PORTAL_URL || "#"} className="hover:text-accent">
+          <Link
+            href={process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com"}
+            className="hover:text-accent"
+          >
             Community Portal
           </Link>
           <span className="text-muted">© {new Date().getFullYear()}</span>

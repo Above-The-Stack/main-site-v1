@@ -18,6 +18,8 @@ const pillars = [
 ];
 
 export default function HomePage() {
+  const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
+
   return (
     <div className="space-y-16 md:space-y-20">
       <Section>
@@ -38,7 +40,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
-              <PrimaryButton href={process.env.NEXT_PUBLIC_PORTAL_URL || "#"}>Join the Community</PrimaryButton>
+              <PrimaryButton href={portalUrl}>Join the Community</PrimaryButton>
               <SecondaryButton href="/resources">Explore Resources</SecondaryButton>
             </div>
           </div>

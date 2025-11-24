@@ -11,7 +11,7 @@ export default function ResourcesPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Resource vault</p>
             <h1 className="section-title">Vendor-neutral playbooks for modern MSP leaders.</h1>
             <p className="section-subtitle">
-              Practical, community-built guides that live inside the portal—designed to help you evolve services, GTM, and culture without vendor bias.
+              We’re launching with four playbooks built by the founding team. Each lives inside the portal with notes, checklists, and templates to evolve services, GTM, and culture without vendor bias.
             </p>
           </div>
           <div className="card-surface p-8">
@@ -33,12 +33,12 @@ export default function ResourcesPage() {
             <p className="text-sm uppercase tracking-[0.2em] text-muted">Access model</p>
             <h2 className="section-title">Download through the community portal.</h2>
             <p className="section-subtitle">
-              Join free to access playbook cards, summaries, and download links. Premium tiers can be layered on later for closed roundtables or advisory cohorts.
+              Join free to access playbook cards, summaries, and download links. Premium tiers will be layered on later for closed roundtables or advisory cohorts.
             </p>
           </div>
           <div className="grid gap-3 text-sm text-muted">
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">• Community access is free with a portal account.</div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">• Playbooks live inside the portal—not as public files.</div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">• Four launch playbooks are available today, with more to follow.</div>
             <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3">• Expect practical checklists, frameworks, and culture-first guidance.</div>
           </div>
         </div>

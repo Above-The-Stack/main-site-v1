@@ -20,40 +20,40 @@ const pillars = [
 const proofPoints = [
   {
     title: "Operator-grade content",
-    description: "Every guide is built with active MSP founders and operators. No fluff, no filler—just systems that scale.",
+    description: "Every guide is built with active MSP founders and operators. No fluff, no filler—just systems you can use now.",
   },
   {
     title: "Modern service design",
     description: "We translate the Managed Intelligence Provider mindset into offers, automation layers, and client outcomes.",
   },
   {
-    title: "Enterprise polish",
-    description: "Presentation-ready templates, board-level narratives, and enablement assets you can ship today.",
+    title: "Execution-first assets",
+    description: "Presentation-ready templates, cadences, and enablement assets that keep early teams moving.",
   },
 ];
 
 const programs = [
   {
     title: "Cohorts & roundtables",
-    description: "Live sprints where teams redesign packaging, pricing, and delivery while learning from peers.",
+    description: "Small-group sessions where founding members test packaging, pricing, and delivery ideas together.",
     tag: "Live",
   },
   {
     title: "Resource vault",
-    description: "A living library of playbooks, checklists, and templates to modernize every part of your MSP.",
+    description: "Four launch playbooks plus checklists and templates that will expand with every new release.",
     tag: "On-demand",
   },
   {
     title: "Executive advisory",
-    description: "Strategic counsel on productizing services, culture, and automation investments that actually stick.",
+    description: "Early advisory conversations focused on productizing services, culture, and automation experiments.",
     tag: "Invite-only",
   },
 ];
 
 const metrics = [
-  { label: "Operators collaborating", value: "4.2k" },
-  { label: "Playbooks shipped", value: "180+" },
-  { label: "Automation wins shared", value: "320" },
+  { label: "Founding members", value: "4" },
+  { label: "Playbooks available", value: "4" },
+  { label: "Live sessions scheduled", value: "3" },
 ];
 
 export default function HomePage() {
@@ -70,10 +70,10 @@ export default function HomePage() {
             </div>
             <div className="space-y-4">
               <h1 className="text-4xl font-semibold leading-tight text-foreground md:text-5xl">
-                Above The Stack is the flagship experience for Managed Intelligence Providers.
+                Above The Stack is a newly founded collective for Managed Intelligence Providers.
               </h1>
               <p className="text-lg text-muted md:text-xl">
-                We’re a practitioner-built platform helping MSPs redesign services, automate intelligently, and operate with enterprise polish.
+                We’re starting with four founders, four launch playbooks, and a clear focus on helping MSPs redesign services, automate intelligently, and operate with polish.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-4">

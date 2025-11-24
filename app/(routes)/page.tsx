@@ -4,74 +4,128 @@ import { Section } from "@/components/Section";
 
 const pillars = [
   {
-    title: "Community",
-    description: "Peer discussions, AMAs, and cohorts built for MSP operators to exchange what works.",
+    title: "Community Ops",
+    description: "Peer AMAs, cohorts, and curated rooms that keep operators connected to what actually works.",
   },
   {
     title: "Research",
-    description: "Insights, frameworks, and maturity models that stay vendor-neutral and practitioner-led.",
+    description: "Field notes, benchmarks, and maturity models built with MSP leaders—not vendors.",
   },
   {
-    title: "Playbooks",
-    description: "Practical PDFs, templates, and checklists you can deploy with your teams this quarter.",
+    title: "Execution",
+    description: "Implementation playbooks, templates, and cadences you can drop into your operating system this quarter.",
   },
+];
+
+const proofPoints = [
+  {
+    title: "Operator-grade content",
+    description: "Every guide is built with active MSP founders and operators. No fluff, no filler—just systems that scale.",
+  },
+  {
+    title: "Modern service design",
+    description: "We translate the Managed Intelligence Provider mindset into offers, automation layers, and client outcomes.",
+  },
+  {
+    title: "Enterprise polish",
+    description: "Presentation-ready templates, board-level narratives, and enablement assets you can ship today.",
+  },
+];
+
+const programs = [
+  {
+    title: "Cohorts & roundtables",
+    description: "Live sprints where teams redesign packaging, pricing, and delivery while learning from peers.",
+    tag: "Live",
+  },
+  {
+    title: "Resource vault",
+    description: "A living library of playbooks, checklists, and templates to modernize every part of your MSP.",
+    tag: "On-demand",
+  },
+  {
+    title: "Executive advisory",
+    description: "Strategic counsel on productizing services, culture, and automation investments that actually stick.",
+    tag: "Invite-only",
+  },
+];
+
+const metrics = [
+  { label: "Operators collaborating", value: "4.2k" },
+  { label: "Playbooks shipped", value: "180+" },
+  { label: "Automation wins shared", value: "320" },
 ];
 
 export default function HomePage() {
   const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
 
   return (
-    <div className="space-y-16 md:space-y-20">
-      <Section>
-        <div className="grid gap-10 md:grid-cols-2 md:items-center">
-          <div className="space-y-6">
-            <p className="inline-flex rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-              Vendor-neutral. MSP-first. Future-focused.
-            </p>
+    <div className="space-y-10 md:space-y-16">
+      <Section className="pt-10">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-accent">
+              <span className="h-2 w-2 rounded-full bg-cta" />
+              Vendor-neutral. MSP-first. Unapologetically modern.
+            </div>
             <div className="space-y-4">
-              <h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl">
-                Above The Stack
+              <h1 className="text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+                Above The Stack is the flagship experience for Managed Intelligence Providers.
               </h1>
-              <p className="text-xl text-muted">
-                Shaping the future of the MSP and IT Channel.
-              </p>
-              <p className="text-lg text-foreground/80">
-                Above The Stack is a vendor-neutral, MSP-first community and content platform built for operators who want to level up from tool operators to intelligence partners.
+              <p className="text-lg text-muted md:text-xl">
+                We’re a practitioner-built platform helping MSPs redesign services, automate intelligently, and operate with enterprise polish.
               </p>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
-              <PrimaryButton href={portalUrl}>Join the Community</PrimaryButton>
-              <SecondaryButton href="/resources">Explore Resources</SecondaryButton>
+            <div className="flex flex-wrap items-center gap-4">
+              <PrimaryButton href={portalUrl}>Join the community</PrimaryButton>
+              <SecondaryButton href="/vision">See the vision</SecondaryButton>
+              <p className="text-sm text-muted">Instant access • Curated peers • Zero vendor noise</p>
             </div>
           </div>
-          <div className="card-surface relative overflow-hidden p-8">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-surface/40" />
-            <div className="relative space-y-4">
-              <h2 className="text-2xl font-semibold text-foreground">The MSP evolution</h2>
-              <p className="text-muted">
-                We believe the next generation of MSPs will operate as Managed Intelligence Providers (MIPs)—trusted partners who combine automation, data, and culture to deliver recurring outcomes.
+          <div className="card-surface relative grid gap-6 p-8">
+            <div className="grid gap-4 md:grid-cols-3">
+              {metrics.map((metric) => (
+                <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="text-3xl font-semibold text-white">{metric.value}</p>
+                  <p className="text-xs uppercase tracking-[0.15em] text-muted">{metric.label}</p>
+                </div>
+              ))}
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-accent/10 via-cta/5 to-white/5 p-6 shadow-subtle">
+              <p className="text-sm uppercase tracking-[0.15em] text-muted">The Managed Intelligence Play</p>
+              <p className="mt-3 text-lg text-foreground">
+                Move from reactive support to proactive intelligence partner. Combine automation, data, and culture to deliver outcomes with confidence.
               </p>
-              <ul className="space-y-2 text-foreground/85">
-                <li>• Modern service packaging and recurring value.</li>
-                <li>• AI-assisted delivery across the lifecycle.</li>
-                <li>• Communities of practice that share playbooks and proof.</li>
-              </ul>
+              <div className="mt-4 flex flex-wrap gap-3 text-sm text-muted">
+                <span className="rounded-full bg-white/5 px-3 py-1">Modern packaging</span>
+                <span className="rounded-full bg-white/5 px-3 py-1">Automation & AI</span>
+                <span className="rounded-full bg-white/5 px-3 py-1">Communities of proof</span>
+              </div>
             </div>
           </div>
         </div>
       </Section>
 
       <Section>
-        <div className="space-y-10">
-          <div className="space-y-3">
-            <h2 className="section-title">The Three Pillars</h2>
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="space-y-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Three pillars</p>
+            <h2 className="section-title">Everything is built for operators</h2>
             <p className="section-subtitle">
-              Everything we build lives at the intersection of community, research, and practical execution.
+              From the first interview to the last template, our focus is on helping MSP teams execute with clarity and confidence.
             </p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {pillars.map((pillar) => (
+                <div key={pillar.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm font-semibold text-accent">{pillar.title}</p>
+                  <p className="mt-2 text-sm text-muted">{pillar.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
           <div className="card-grid md:grid-cols-3">
-            {pillars.map((pillar) => (
-              <Card key={pillar.title} title={pillar.title} description={pillar.description} />
+            {proofPoints.map((item) => (
+              <Card key={item.title} title={item.title} description={item.description} />
             ))}
           </div>
         </div>
@@ -79,38 +133,34 @@ export default function HomePage() {
 
       <Section>
         <div className="space-y-8">
-          <div className="space-y-3">
-            <h2 className="section-title">Why Above The Stack</h2>
-            <p className="section-subtitle">
-              A platform designed for MSPs who want to build healthier businesses and future-ready teams.
-            </p>
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="space-y-2">
+              <p className="text-sm uppercase tracking-[0.2em] text-muted">Programs</p>
+              <h2 className="section-title">Ship-ready experiences</h2>
+              <p className="section-subtitle">Choose the mix of live, asynchronous, and advisory support that fits your team.</p>
+            </div>
+            <SecondaryButton href="/events">View calendar</SecondaryButton>
           </div>
           <div className="card-grid md:grid-cols-3">
-            <Card
-              title="Vendor-neutral"
-              description="No sales pitches—just honest dialogue, research, and operator proof points."
-            />
-            <Card
-              title="MSP culture first"
-              description="We obsess over team health, repeatable delivery, and business model resilience."
-            />
-            <Card
-              title="Future-oriented"
-              description="Championing the Managed Intelligence Provider concept to keep you ahead of the curve."
-            />
+            {programs.map((program) => (
+              <Card key={program.title} title={program.title} description={program.description} tag={program.tag} />
+            ))}
           </div>
         </div>
       </Section>
 
       <Section>
-        <div className="card-surface flex flex-col items-start gap-6 px-8 py-10 text-center md:flex-row md:items-center md:justify-between md:text-left">
-          <div className="space-y-2">
-            <h3 className="text-2xl font-semibold text-foreground">Ready to go above the stack?</h3>
-            <p className="text-muted">Join the conversation or reach out to plan something together.</p>
+        <div className="card-surface flex flex-col gap-6 px-8 py-10 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-3">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Next step</p>
+            <h3 className="text-2xl font-semibold text-foreground md:text-3xl">Ready to operate above the stack?</h3>
+            <p className="text-muted">
+              Join the portal, meet the operators, and start shipping better services with professional-grade assets.
+            </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <PrimaryButton href="/community">Explore the Community</PrimaryButton>
-            <SecondaryButton href="/contact">Contact Us</SecondaryButton>
+            <PrimaryButton href={portalUrl}>Enter the portal</PrimaryButton>
+            <SecondaryButton href="/contact">Talk with us</SecondaryButton>
           </div>
         </div>
       </Section>

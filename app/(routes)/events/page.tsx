@@ -8,11 +8,24 @@ export default function EventsPage() {
   );
 
   return (
-    <div className="space-y-10 md:space-y-14">
+    <div className="space-y-12 md:space-y-16">
       <Section>
-        <div className="space-y-3">
-          <h1 className="section-title">Events</h1>
-          <p className="section-subtitle">Upcoming AMAs, cohorts, and roundtables built with the community.</p>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="space-y-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Events & cohorts</p>
+            <h1 className="section-title">Curated live experiences for operators.</h1>
+            <p className="section-subtitle">
+              AMAs, workshops, and roundtables designed to help you ship better offers, automation, and culture.
+            </p>
+          </div>
+          <div className="card-surface p-8">
+            <p className="text-sm uppercase tracking-[0.15em] text-muted">What to expect</p>
+            <ul className="mt-4 space-y-3 text-muted">
+              <li>• Practical sessions with templates you can copy.</li>
+              <li>• Operator-only rooms—no vendor pitches.</li>
+              <li>• Access to recordings and summaries in the portal.</li>
+            </ul>
+          </div>
         </div>
       </Section>
 

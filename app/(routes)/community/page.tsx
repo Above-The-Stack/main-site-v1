@@ -35,43 +35,44 @@ export default function CommunityPage() {
   return (
     <div className="space-y-12 md:space-y-16">
       <Section>
-        <div className="space-y-4">
-          <h1 className="section-title">Community</h1>
-          <p className="text-lg text-foreground/80">
-            Join the Above The Stack Discourse portal to meet operators, founders, and channel leaders.
-          </p>
-          <p className="text-muted">
-            Hosted at {portalUrl}. It’s where AMAs, cohorts, and discussions live.
-          </p>
-          <div className="flex flex-wrap gap-3">
-            <PrimaryButton href={portalUrl}>Enter the Portal</PrimaryButton>
-            <SecondaryButton href="#latest">Latest Discussions</SecondaryButton>
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div className="space-y-5">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Community Portal</p>
+            <h1 className="text-4xl font-semibold text-foreground md:text-5xl">A curated room for operators, founders, and channel leaders.</h1>
+            <p className="text-lg text-muted">
+              Join live AMAs, contribute to field research, and collaborate on playbooks with peers who are building the Managed Intelligence Provider model.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              <PrimaryButton href={portalUrl}>Enter the Portal</PrimaryButton>
+              <SecondaryButton href="#latest">Latest Discussions</SecondaryButton>
+            </div>
+          </div>
+          <div className="card-surface p-8">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">How it works</p>
+            <div className="mt-6 space-y-4">
+              {["Create your profile", "Share your focus areas", "Join AMAs, cohorts, and daily threads"].map((step, index) => (
+                <div key={step} className="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-xs uppercase tracking-[0.15em] text-accent">Step {index + 1}</p>
+                  <p className="mt-2 text-base font-semibold text-foreground">{step}</p>
+                  <p className="text-sm text-muted">
+                    {index === 0 && "Securely log in to the Discourse portal in seconds."}
+                    {index === 1 && "Let peers know your industry, tools, and outcomes you care about."}
+                    {index === 2 && "Jump into live conversations or replay threads with bookmarked insights."}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Section>
 
-      <Section>
-        <div className="card-grid md:grid-cols-3">
-          {["Join the portal", "Introduce yourself", "Join discussions, AMAs, and cohorts"].map((step, index) => (
-            <div key={step} className="card-surface p-6">
-              <p className="text-sm font-semibold text-accent">Step {index + 1}</p>
-              <h3 className="mt-3 text-xl font-semibold text-foreground">{step}</h3>
-              <p className="mt-2 text-muted">
-                {index === 0 && "Create your account to unlock the community."}
-                {index === 1 && "Share your focus areas so peers can collaborate."}
-                {index === 2 && "Join in on live AMAs, cohorts, and daily discussions."}
-              </p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
       <Section id="latest">
-        <div className="space-y-4">
-          <div className="flex flex-col justify-between gap-3 md:flex-row md:items-end">
+        <div className="space-y-6">
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-muted">Live pulse</p>
               <h2 className="section-title">Latest Discussions</h2>
-              <p className="section-subtitle">Pulled directly from the community portal.</p>
+              <p className="section-subtitle">Fresh topics pulled directly from the Above The Stack Discourse portal.</p>
             </div>
             <PrimaryButton href={portalUrl} target="_blank" rel="noreferrer">
               Open Community

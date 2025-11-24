@@ -60,85 +60,94 @@ export default function ContactPage() {
   return (
     <div className="space-y-10 md:space-y-14">
       <Section>
-        <div className="space-y-3">
-          <h1 className="section-title">Contact</h1>
-          <p className="section-subtitle">Tell us about your team, challenges, or ideas for the community.</p>
-        </div>
-      </Section>
-
-      <Section>
-        <div className="card-surface p-8">
-          <form className="space-y-6" onSubmit={handleSubmit}>
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-foreground" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Your name"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-foreground" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="you@company.com"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-foreground" htmlFor="company">
-                  Company (optional)
-                </label>
-                <input
-                  id="company"
-                  name="company"
-                  value={company}
-                  onChange={(e) => setCompany(e.target.value)}
-                  placeholder="Company name"
-                />
-              </div>
-              <div className="space-y-2 md:col-span-2">
-                <label className="text-sm font-semibold text-foreground" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Tell us about your goals, challenges, or ideas."
-                />
-              </div>
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="space-y-4">
+            <p className="text-sm uppercase tracking-[0.2em] text-muted">Contact</p>
+            <h1 className="text-4xl font-semibold text-foreground md:text-5xl">Tell us where you want to take your MSP.</h1>
+            <p className="text-lg text-muted">
+              Share your goals and challenges—we’ll connect you with the right resources, cohorts, or advisory support.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {["Packaging & pricing", "Automation & AI", "Culture & leadership", "Client experience"].map((item) => (
+                <div key={item} className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-muted">
+                  {item}
+                </div>
+              ))}
             </div>
-            <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
-              <PrimaryButton type="submit" disabled={loading}>
-                {loading ? "Sending..." : "Send Message"}
-              </PrimaryButton>
-              {status && (
-                <p
-                  className={statusType === "success" ? "text-sm text-green-600" : "text-sm text-red-500"}
-                  role="status"
-                  aria-live="polite"
-                >
-                  {status}
-                </p>
-              )}
-            </div>
-          </form>
+          </div>
+          <div className="card-surface p-8">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="grid gap-6 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-foreground" htmlFor="name">
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your name"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-foreground" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@company.com"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-foreground" htmlFor="company">
+                    Company (optional)
+                  </label>
+                  <input
+                    id="company"
+                    name="company"
+                    value={company}
+                    onChange={(e) => setCompany(e.target.value)}
+                    placeholder="Company name"
+                  />
+                </div>
+                <div className="space-y-2 md:col-span-2">
+                  <label className="text-sm font-semibold text-foreground" htmlFor="message">
+                    What should we prioritize?
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={5}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    placeholder="Share context, timelines, or the outcomes you’re targeting."
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+                <PrimaryButton type="submit" disabled={loading}>
+                  {loading ? "Sending..." : "Send Message"}
+                </PrimaryButton>
+                {status && (
+                  <p
+                    className={statusType === "success" ? "text-sm text-green-400" : "text-sm text-red-400"}
+                    role="status"
+                    aria-live="polite"
+                  >
+                    {status}
+                  </p>
+                )}
+              </div>
+            </form>
+          </div>
         </div>
       </Section>
     </div>

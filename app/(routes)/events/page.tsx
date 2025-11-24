@@ -12,7 +12,7 @@ export default function EventsPage() {
       <Section>
         <div className="space-y-3">
           <h1 className="section-title">Events</h1>
-          <p className="section-subtitle">Upcoming AMAs, cohorts, and roundtables built with the community.</p>
+          <p className="section-subtitle">Admin-managed upcoming themes, quarterly roundtables, and contributor showcases.</p>
         </div>
       </Section>
 

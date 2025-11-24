@@ -8,7 +8,7 @@ export default function ResourcesPage() {
       <Section>
         <div className="space-y-3">
           <h1 className="section-title">Resources</h1>
-          <p className="section-subtitle">Playbooks, checklists, and frameworks curated for MSP operators.</p>
+          <p className="section-subtitle">Vendor-neutral playbooks and guides available in the Above The Stack Community Portal.</p>
         </div>
       </Section>
 

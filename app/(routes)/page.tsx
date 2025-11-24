@@ -17,6 +17,60 @@ const pillars = [
   },
 ];
 
+const values = [
+  "Vendor-neutral and community-powered",
+  "Intelligence-driven over tool-led",
+  "Future-focused with practical proof",
+  "Culture before technology",
+  "Inclusive, clear, and confident",
+];
+
+const offerings = [
+  {
+    title: "Community Platform",
+    description:
+      "A vendor-neutral space for MSP owners, security practitioners, and channel leaders to collaborate.",
+  },
+  {
+    title: "Playbooks & Frameworks",
+    description:
+      "Downloadable guides, templates, and assessments to operationalize strategy, security, and go-to-market.",
+  },
+  {
+    title: "Events & Roundtables",
+    description:
+      "Monthly themes, quarterly roundtables, and contributor showcases focused on modern MSP challenges.",
+  },
+  {
+    title: "Research & Perspectives",
+    description: "Industry views that stay vendor-neutral and spotlight the evolution toward Managed Intelligence Providers.",
+  },
+];
+
+const founders = [
+  {
+    name: "Tycho Löke",
+    role: "Founder & Vision Lead",
+    bio: "Channel strategist guiding the MSP evolution toward intelligence-driven services and cultural transformation.",
+    emphasis: true,
+  },
+  {
+    name: "Pierre Kleine Schaars",
+    role: "Co-Founder & Operational Excellence Lead",
+    bio: "MSP operator focused on scalable delivery, operational maturity, and secure recurring-value models.",
+  },
+  {
+    name: "Kevin Zwaan",
+    role: "Co-Founder & Ethical Hacker / Community Security Lead",
+    bio: "Ethical hacker elevating security culture, responsible practices, and vulnerability awareness for MSPs.",
+  },
+  {
+    name: "Ashley Schut",
+    role: "Co-Founder & Strategic Ecosystem Lead",
+    bio: "Industry connector strengthening collaboration between MSPs, vendors, and communities across the channel.",
+  },
+];
+
 export default function HomePage() {
   const portalUrl = process.env.NEXT_PUBLIC_PORTAL_URL || "https://portal.abovethestack.com";
 
@@ -26,17 +80,17 @@ export default function HomePage() {
         <div className="grid gap-10 md:grid-cols-2 md:items-center">
           <div className="space-y-6">
             <p className="inline-flex rounded-full bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-              Vendor-neutral. MSP-first. Future-focused.
+              Founded 2025 • Netherlands • Vendor-neutral
             </p>
             <div className="space-y-4">
               <h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl">
                 Above The Stack
               </h1>
               <p className="text-xl text-muted">
-                Shaping the future of the MSP and IT Channel.
+                Shaping the future of the MSP and IT channel.
               </p>
               <p className="text-lg text-foreground/80">
-                Above The Stack is a vendor-neutral, MSP-first community and content platform built for operators who want to level up from tool operators to intelligence partners.
+                Above The Stack is a vendor-neutral, MSP-first community led by founder Tycho Löke and co-founders Pierre Kleine Schaars, Kevin Zwaan, and Ashley Schut. We help operators move from tool operators to intelligence partners through mindset, strategy, and culture.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-3">
@@ -98,6 +152,88 @@ export default function HomePage() {
               title="Future-oriented"
               description="Championing the Managed Intelligence Provider concept to keep you ahead of the curve."
             />
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <h2 className="section-title">Mission & Vision</h2>
+            <p className="section-subtitle">Vendor-neutral. MSP-first. Future-focused.</p>
+          </div>
+          <div className="card-grid md:grid-cols-2">
+            <Card
+              title="Mission"
+              description="To elevate the MSP industry through a vendor-neutral community focused on intelligence, strategy, mindset, and cultural evolution beyond tools alone."
+            />
+            <Card
+              title="Vision"
+              description="To become the most trusted collective of minds shaping the future of the IT channel and defining what it means to be a modern service provider."
+            />
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <h2 className="section-title">Values</h2>
+            <p className="section-subtitle">Principles that anchor how we build, share, and serve.</p>
+          </div>
+          <div className="card-surface p-8">
+            <ul className="space-y-3 text-foreground/85">
+              {values.map((value) => (
+                <li key={value}>• {value}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <h2 className="section-title">Founders & Leadership</h2>
+            <p className="section-subtitle">Led by Tycho Löke with co-founders Pierre Kleine Schaars, Kevin Zwaan, and Ashley Schut.</p>
+          </div>
+          <div className="card-grid md:grid-cols-2 lg:grid-cols-4">
+            {founders.map((founder) => (
+              <Card
+                key={founder.name}
+                title={founder.name}
+                description={founder.bio}
+                tag={founder.role}
+                className={founder.emphasis ? "ring-1 ring-accent/40" : undefined}
+              />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <h2 className="section-title">Offerings</h2>
+            <p className="section-subtitle">Built for MSP owners, security practitioners, and channel professionals.</p>
+          </div>
+          <div className="card-grid md:grid-cols-2 lg:grid-cols-4">
+            {offerings.map((offering) => (
+              <Card key={offering.title} title={offering.title} description={offering.description} />
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="card-surface flex flex-col items-start gap-6 px-8 py-10 text-center md:flex-row md:items-center md:justify-between md:text-left">
+          <div className="space-y-2">
+            <h3 className="text-2xl font-semibold text-foreground">Membership model</h3>
+            <p className="text-muted">Free community access today. Premium tier coming soon for deeper research, templates, and advisory.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <PrimaryButton href={portalUrl}>Join free</PrimaryButton>
+            <SecondaryButton href="/contact">Partner with us</SecondaryButton>
           </div>
         </div>
       </Section>

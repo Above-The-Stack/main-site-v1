@@ -23,10 +23,10 @@ export default function VisionPage() {
         <div className="space-y-4">
           <h1 className="section-title">Our Vision</h1>
           <p className="text-lg text-foreground/80">
-            Above The Stack is a vendor-neutral think-tank for MSPs and the broader IT channel. We are here to help operators move from tool operators to intelligence partners.
+            Above The Stack is a vendor-neutral think-tank for MSPs and the broader IT channel. Founded in the Netherlands in 2025, we help operators move from tool operators to intelligence partners.
           </p>
           <p className="text-muted">
-            We believe the future belongs to MSPs who orchestrate intelligence—combining data, automation, and culture to create resilient, outcome-driven services.
+            Our mission: elevate the MSP industry through intelligence, strategy, mindset, and cultural evolution beyond tools alone. Our vision: become the most trusted collective shaping what it means to be a modern service provider.
           </p>
         </div>
       </Section>

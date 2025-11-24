@@ -63,6 +63,10 @@ export default function ContactPage() {
         <div className="space-y-3">
           <h1 className="section-title">Contact</h1>
           <p className="section-subtitle">Tell us about your team, challenges, or ideas for the community.</p>
+          <div className="space-y-2 text-muted">
+            <p>Email us at <a className="text-accent underline" href="mailto:info@abovethestack.com">info@abovethestack.com</a> or use the form below.</p>
+            <p>Support lives inside the Community Portal, including downloads, FAQs, and contributor introductions.</p>
+          </div>
         </div>
       </Section>
 

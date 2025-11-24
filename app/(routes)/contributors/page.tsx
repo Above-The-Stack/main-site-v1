@@ -12,7 +12,7 @@ export default function ContributorsPage() {
         <div className="space-y-3">
           <h1 className="section-title">Contributors</h1>
           <p className="section-subtitle">
-            Practitioners, researchers, and community hosts shaping Above The Stack.
+            Founders, security leaders, and community practitioners shaping Above The Stack.
           </p>
         </div>
       </Section>

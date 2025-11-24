@@ -64,15 +64,15 @@ export default function HomePage() {
       <Section className="pt-10">
         <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-accent">
-              <span className="h-2 w-2 rounded-full bg-cta" />
+            <div className="inline-flex items-center gap-2 rounded-pill border border-brand-border-subtle bg-brand-surface-soft/70 px-4 py-2 text-sm font-semibold text-brand-accent shadow-soft">
+              <span className="h-2 w-2 rounded-full bg-brand-primary" />
               Vendor-neutral. MSP-first. Unapologetically modern.
             </div>
             <div className="space-y-4">
-              <h1 className="text-4xl font-semibold leading-tight text-foreground md:text-5xl">
+              <h1 className="text-4xl font-semibold leading-tight text-brand-text md:text-5xl">
                 Above The Stack is a newly founded collective for Managed Intelligence Providers.
               </h1>
-              <p className="text-lg text-muted md:text-xl">
+              <p className="text-lg text-brand-text-muted md:text-xl">
                 We’re starting with four founders, four launch playbooks, and a clear focus on helping MSPs redesign services, automate intelligently, and operate with polish.
               </p>
             </div>
@@ -85,21 +85,21 @@ export default function HomePage() {
           <div className="card-surface relative grid gap-6 p-8">
             <div className="grid gap-4 md:grid-cols-3">
               {metrics.map((metric) => (
-                <div key={metric.label} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
-                  <p className="text-3xl font-semibold text-white">{metric.value}</p>
-                  <p className="text-xs uppercase tracking-[0.15em] text-muted">{metric.label}</p>
+                <div key={metric.label} className="rounded-2xl border border-brand-border-subtle bg-brand-surface-soft p-4 text-center shadow-soft">
+                  <p className="text-3xl font-semibold text-brand-text">{metric.value}</p>
+                  <p className="text-xs uppercase tracking-[0.15em] text-brand-text-muted">{metric.label}</p>
                 </div>
               ))}
             </div>
-            <div className="rounded-2xl border border-white/10 bg-gradient-to-r from-accent/10 via-cta/5 to-white/5 p-6 shadow-subtle">
-              <p className="text-sm uppercase tracking-[0.15em] text-muted">The Managed Intelligence Play</p>
-              <p className="mt-3 text-lg text-foreground">
+            <div className="rounded-2xl border border-brand-border-subtle bg-brand-surface-soft p-6 shadow-soft">
+              <p className="text-sm uppercase tracking-[0.15em] text-brand-text-muted">The Managed Intelligence Play</p>
+              <p className="mt-3 text-lg text-brand-text">
                 Move from reactive support to proactive intelligence partner. Combine automation, data, and culture to deliver outcomes with confidence.
               </p>
-              <div className="mt-4 flex flex-wrap gap-3 text-sm text-muted">
-                <span className="rounded-full bg-white/5 px-3 py-1">Modern packaging</span>
-                <span className="rounded-full bg-white/5 px-3 py-1">Automation & AI</span>
-                <span className="rounded-full bg-white/5 px-3 py-1">Communities of proof</span>
+              <div className="mt-4 flex flex-wrap gap-3 text-sm text-brand-text-muted">
+                <span className="rounded-pill border border-brand-border-subtle bg-brand-surface px-3 py-1 text-brand-text">Modern packaging</span>
+                <span className="rounded-pill border border-brand-border-subtle bg-brand-surface px-3 py-1 text-brand-text">Automation & AI</span>
+                <span className="rounded-pill border border-brand-border-subtle bg-brand-surface px-3 py-1 text-brand-text">Communities of proof</span>
               </div>
             </div>
           </div>
@@ -109,16 +109,16 @@ export default function HomePage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="space-y-4">
-            <p className="text-sm uppercase tracking-[0.2em] text-muted">Three pillars</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-brand-text-muted">Three pillars</p>
             <h2 className="section-title">Everything is built for operators</h2>
             <p className="section-subtitle">
               From the first interview to the last template, our focus is on helping MSP teams execute with clarity and confidence.
             </p>
             <div className="grid gap-4 md:grid-cols-2">
               {pillars.map((pillar) => (
-                <div key={pillar.title} className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p className="text-sm font-semibold text-accent">{pillar.title}</p>
-                  <p className="mt-2 text-sm text-muted">{pillar.description}</p>
+                <div key={pillar.title} className="rounded-2xl border border-brand-border-subtle bg-brand-surface-soft p-4 shadow-soft">
+                  <p className="text-sm font-semibold text-brand-accent">{pillar.title}</p>
+                  <p className="mt-2 text-sm text-brand-text-muted">{pillar.description}</p>
                 </div>
               ))}
             </div>
@@ -152,9 +152,9 @@ export default function HomePage() {
       <Section>
         <div className="card-surface flex flex-col gap-6 px-8 py-10 md:flex-row md:items-center md:justify-between">
           <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.2em] text-muted">Next step</p>
-            <h3 className="text-2xl font-semibold text-foreground md:text-3xl">Ready to operate above the stack?</h3>
-            <p className="text-muted">
+            <p className="text-sm uppercase tracking-[0.2em] text-brand-text-muted">Next step</p>
+            <h3 className="text-2xl font-semibold text-brand-text md:text-3xl">Ready to operate above the stack?</h3>
+            <p className="text-brand-text-muted">
               Join the portal, meet the operators, and start shipping better services with professional-grade assets.
             </p>
           </div>

@@ -2,32 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #f18268;
+  --color-primary-rgb: 241 130 104;
+  --color-accent: #10c0e7;
+  --color-accent-rgb: 16 192 231;
+  --color-bg: #22327a;
+  --color-bg-rgb: 34 50 122;
+  --color-surface: #2c3c92;
+  --color-surface-rgb: 44 60 146;
+  --color-surface-soft: #3047a6;
+  --color-surface-soft-rgb: 48 71 166;
+  --color-text: #f4f7ff;
+  --color-text-rgb: 244 247 255;
+  --color-text-muted: #c8d2ff;
+  --color-text-muted-rgb: 200 210 255;
+  --color-border-subtle: #3c4f9e;
+  --color-border-subtle-rgb: 60 79 158;
+}
+
 @layer base {
   body {
-    @apply bg-background font-sans text-foreground antialiased;
+    @apply bg-brand-bg font-sans text-brand-text antialiased;
+    background-color: var(--color-bg);
     background-image:
-      radial-gradient(circle at 10% 20%, rgba(168, 127, 248, 0.16), transparent 28%),
-      radial-gradient(circle at 80% 10%, rgba(109, 214, 255, 0.18), transparent 30%),
-      radial-gradient(circle at 30% 70%, rgba(76, 105, 255, 0.16), transparent 32%),
-      linear-gradient(145deg, #050915 0%, #0b1224 50%, #0f162d 100%);
+      radial-gradient(circle at 18% 18%, rgba(241, 130, 104, 0.22), transparent 32%),
+      radial-gradient(circle at 82% 12%, rgba(16, 192, 231, 0.2), transparent 30%),
+      radial-gradient(circle at 45% 78%, rgba(241, 130, 104, 0.15), transparent 32%),
+      linear-gradient(135deg, #1f2d72 0%, #22327a 45%, #1a255f 100%);
   }
 
   a {
-    @apply font-semibold text-accent transition-colors duration-200;
+    @apply font-semibold text-brand-accent transition-colors duration-200;
   }
 
   a:hover {
-    @apply text-cta;
+    @apply text-brand-primary;
   }
 }
 
 @layer components {
   .section-title {
-    @apply text-3xl font-semibold tracking-tight text-foreground md:text-4xl;
+    @apply text-3xl font-semibold tracking-tight text-brand-text md:text-4xl;
   }
 
   .section-subtitle {
-    @apply max-w-3xl text-muted;
+    @apply max-w-3xl text-brand-text-muted;
   }
 
   .card-grid {
@@ -35,32 +55,29 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent via-cta to-accent px-5 py-3 text-base font-semibold text-[#0a0f1b] shadow-subtle transition hover:brightness-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill bg-brand-primary px-5 py-3 text-base font-semibold text-brand-bg shadow-glowPrimary transition hover:bg-brand-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border/80 bg-gradient-to-r from-white/5 to-white/0 px-5 py-3 text-base font-semibold text-foreground transition hover:border-accent/60 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+    @apply inline-flex items-center justify-center gap-2 rounded-pill border border-brand-border-subtle bg-brand-surface-soft/60 px-5 py-3 text-base font-semibold text-brand-text transition hover:border-brand-accent hover:bg-brand-surface-soft hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-accent;
   }
 
   .card-surface {
-    @apply rounded-3xl border border-white/10 bg-gradient-to-br from-white/5 via-card/60 to-black/20 shadow-subtle backdrop-blur-xl;
+    @apply rounded-2xl border border-brand-border-subtle bg-brand-surface shadow-soft backdrop-blur-xl;
+    background-image: linear-gradient(140deg, rgba(16, 192, 231, 0.06), rgba(241, 130, 104, 0.08));
   }
 
   input,
   textarea {
-    @apply rounded-xl border border-border/70 bg-surface px-4 py-3 text-foreground transition placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/40;
+    @apply rounded-xl border border-brand-border-subtle bg-brand-surface-soft/80 px-4 py-3 text-brand-text transition placeholder:text-brand-text-muted focus:border-brand-accent focus:outline-none focus:ring-2 focus:ring-brand-accent/30;
   }
 }
 
 @layer utilities {
-  .shadow-subtle {
-    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
-  }
-
   .grid-angled {
-    background: radial-gradient(circle at 20% 20%, rgba(109, 214, 255, 0.08), transparent 28%),
-      radial-gradient(circle at 80% 20%, rgba(168, 127, 248, 0.08), transparent 22%),
-      linear-gradient(120deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) -30px 10px / 120px 120px,
-      linear-gradient(60deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 120px 120px;
+    background: radial-gradient(circle at 22% 18%, rgba(241, 130, 104, 0.18), transparent 30%),
+      radial-gradient(circle at 78% 18%, rgba(16, 192, 231, 0.14), transparent 26%),
+      linear-gradient(120deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px) -30px 10px / 120px 120px,
+      linear-gradient(60deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px) 0 0 / 120px 120px;
   }
 }

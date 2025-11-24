@@ -11,20 +11,20 @@ export default function ContributorsPage() {
       <Section>
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="space-y-4">
-            <p className="text-sm uppercase tracking-[0.2em] text-muted">Contributors</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-brand-text-muted">Contributors</p>
             <h1 className="section-title">A four-person founding team.</h1>
             <p className="section-subtitle">
               Above The Stack has just launched with four founding members. We’ll add community hosts and operator contributors here as they join.
             </p>
           </div>
           <div className="card-surface p-8">
-            <p className="text-sm uppercase tracking-[0.15em] text-muted">Follow along</p>
-            <p className="mt-3 text-muted">
+            <p className="text-sm uppercase tracking-[0.15em] text-brand-text-muted">Follow along</p>
+            <p className="mt-3 text-brand-text-muted">
               Contributor profiles live in the portal. Follow them to join AMAs, cohorts, and research threads.
             </p>
             <Link
               href={portalUrl}
-              className="mt-4 inline-flex w-fit rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-accent hover:border-accent/60"
+              className="mt-4 inline-flex w-fit rounded-pill border border-brand-border-subtle px-4 py-2 text-sm font-semibold text-brand-accent transition hover:border-brand-accent"
             >
               Open the portal
             </Link>
@@ -34,7 +34,7 @@ export default function ContributorsPage() {
 
       <Section>
         <div className="space-y-4">
-          <p className="text-sm uppercase tracking-[0.2em] text-muted">Founders</p>
+          <p className="text-sm uppercase tracking-[0.2em] text-brand-text-muted">Founders</p>
           <h2 className="section-title">A unified founding team led by Tycho Löke.</h2>
           <p className="section-subtitle">
             Tycho sets the long-term vision and MSP 1.0 → MIP frameworks, while Pierre, Kevin, and Ashley bring operational, security, and ecosystem muscle to the platform.
@@ -53,7 +53,7 @@ export default function ContributorsPage() {
                 href={`${portalUrl}/u/${founder.username}`}
                 target="_blank"
                 rel="noreferrer"
-                className="text-accent hover:underline"
+                className="text-brand-accent hover:underline"
               >
                 View profile
               </Link>
@@ -62,34 +62,34 @@ export default function ContributorsPage() {
         </div>
       </Section>
 
-        <Section>
-          {contributorItems.length === 0 ? (
-            <div className="card-surface p-6 text-muted">
-              We’ll publish contributor profiles as soon as the first operators beyond the founding team come onboard.
-            </div>
-          ) : (
-            <div className="card-grid md:grid-cols-2 lg:grid-cols-3">
-              {contributorItems.map((contributor) => (
-                <Card
-                  key={contributor.username}
-                  title={contributor.name}
-                  description={contributor.bio}
-                  tag={contributor.role}
+      <Section>
+        {contributorItems.length === 0 ? (
+          <div className="card-surface p-6 text-brand-text-muted">
+            We’ll publish contributor profiles as soon as the first operators beyond the founding team come onboard.
+          </div>
+        ) : (
+          <div className="card-grid md:grid-cols-2 lg:grid-cols-3">
+            {contributorItems.map((contributor) => (
+              <Card
+                key={contributor.username}
+                title={contributor.name}
+                description={contributor.bio}
+                tag={contributor.role}
+                href={`${portalUrl}/u/${contributor.username}`}
+              >
+                <Link
                   href={`${portalUrl}/u/${contributor.username}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-brand-accent hover:underline"
                 >
-                  <Link
-                    href={`${portalUrl}/u/${contributor.username}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-accent hover:underline"
-                  >
-                    View profile
-                  </Link>
-                </Card>
-              ))}
-            </div>
-          )}
-        </Section>
+                  View profile
+                </Link>
+              </Card>
+            ))}
+          </div>
+        )}
+      </Section>
     </div>
   );
 }
